@@ -3,7 +3,7 @@ import * as itemsAPI from '../../utilities/items-api';
 import * as ordersAPI from '../../utilities/orders-api';
 import { Link, useNavigate } from 'react-router-dom';
 import List from '../../components/List/List';
-import StyleList from '../../components/StyleList/StyleList';
+import CategoryList from '../../components/CategoryList/CategoryList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
 import './NewOrderPage.css';
@@ -11,10 +11,10 @@ import './NewOrderPage.css';
 
 export default function NewOrderPage({ user, setUser }) {
   const [listItems, setListItem] = useState([]);
-  const [activeTaco, setActiveTaco] = useState('');
+  const [activeCat, setActiveCat] = useState('');
   const [cart, setCart] = useState(null);
-  const stylesRef = useRef([]);
-console.log(listItems);
+  const categoriesRef = useRef([]);
+  console.log(listItems);
   const navigate = useNavigate();
 
   async function handleAddToOrder(itemId) {
@@ -35,12 +35,12 @@ console.log(listItems);
   useEffect(function() {
     async function getItems() {
       const items = await itemsAPI.getAll();
-      stylesRef.current = items.reduce((acc, item) => {
-        const taco = item.style.name;
-        return acc.includes(taco) ? acc : [...acc, taco]
+      categoriesRef.current = items.reduce((cats, item) => {
+        const cat = item.category.name;
+        return cats.includes(cat) ? cats : [...cats, cat];
       }, []);
       setListItem(items);
-      setActiveTaco(items[0].style.name);
+      setActiveCat(categoriesRef.current[0]);
     }
     getItems();
 
@@ -54,16 +54,16 @@ console.log(listItems);
   return (
     <main className="NewOrderPage">
       <aside>
-        <StyleList
-          styles={stylesRef.current}
-          activeTaco={activeTaco}
-          setActiveTaco={setActiveTaco}
+      <CategoryList
+          categories={categoriesRef.current}
+          activeCat={activeCat}
+          setActiveCat={setActiveCat}
         />
         <button to="/orders" className="button btn-sm">PREVIOUS ORDERS</button>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       <List
-        listItems={listItems.filter(item => item.style.name === activeTaco)}
+        listItems={listItems.filter(item => item.category.name === activeCat)}
 
         handleAddToOrder={handleAddToOrder}
       />
