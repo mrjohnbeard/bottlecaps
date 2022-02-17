@@ -1,15 +1,15 @@
 require('dotenv').config();
 require('./config/databse');
 
-const Style = require('./models/style');
 const Item = require('./models/item');
+const Style = require('./models/style');
 
 (async function () {
 	await Style.deleteMany({});
 	const styles = await Style.create([
-		{ name: 'Alcohol', sortOrder: 1 },
-		{ name: 'Soda', sortOrder: 2 },
-		{ name: 'Other', sortOrder: 3 },
+		{name: 'Alcohol', sortOrder: 0},
+		{name: 'Soda', sortOrder: 1},
+		{name: 'Other', sortOrder: 2},
 	]);
 
     await Item.deleteMany({});
@@ -18,19 +18,19 @@ const Item = require('./models/item');
 			name: 'CocaCola',
 			year: 1995,
 			price: 5,
-			style: styles[1],
+			style:styles[1],
 		},
 		{
 			name: 'Coors',
 			year: 2000,
 			price: 6,
-			style: styles[0],
+			style:styles[0],
 		},
 		{
             name: 'Fanta',
 			year: 2006,
 			price: 2,
-			style: styles[2],
+			style:styles[2],
 		},
         {
             name: 'Sprite',
