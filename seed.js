@@ -19,35 +19,35 @@ const Category = require('./models/category');
 			year: 1995,
 			price: 5,
 			category:categorys[1],
-			image: 'https://ibb.co/X7jhp9R',
+			image: 'https://i.imgur.com/Sfk5vWw.jpg',
 		},
 		{
 			name: 'Coors',
 			year: 2000,
 			price: 6,
 			category:categorys[0],
-			image: 'https://ibb.co/ryMk0PC',
+			image: 'https://i.imgur.com/H2QGqIl.jpg',
 		},
 		{
             name: 'Crush',
 			year: 2007,
 			price: 7,
 			category:categorys[1],
-			image: 'https://ibb.co/YNk6sT9',
+			image: 'https://i.imgur.com/sUxXGyE.jpg',
 		},
         {
             name: 'Hank',
 			year: 2016,
 			price: 12,
 			category: categorys[1],
-			image: 'https://ibb.co/pJbF8jh',
+			image: 'https://i.imgur.com/OwimOIQ.jpg',
 		},
         {
             name: 'Carta',
 			year: 2000,
 			price: 9,
 			category: categorys[0],
-			image: 'https://ibb.co/Wspgn5t',
+			image: 'https://i.imgur.com/sKZCXP0.jpg',
 		},
 
 		{
@@ -55,7 +55,7 @@ const Category = require('./models/category');
 			year: 2020,
 			price: 8,
 			category: categorys[2],
-			image: 'https://ibb.co/LdKbczj',
+			image: 'https://i.imgur.com/OiLtPCP.jpg',
 		},
 
 		{
@@ -63,7 +63,7 @@ const Category = require('./models/category');
 			year: 2003,
 			price: 6,
 			category: categorys[1],
-			image: 'https://ibb.co/1ZbvSxn',
+			image: 'https://i.imgur.com/8TIbZmx.jpg',
 		},
 
 		{
@@ -71,7 +71,7 @@ const Category = require('./models/category');
 			year: 1998,
 			price: 12,
 			category: categorys[2],
-			image: 'https://ibb.co/ZLqBKpk',
+			image: 'https://i.imgur.com/zLFdP2R.jpg',
 		},
 
 

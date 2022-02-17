@@ -35,3 +35,8 @@
     text-align: center;
     color: var(--text-light);
   }
+
+  .ListItem .img {
+    width: 100px;
+    height: 100px;
+  }
