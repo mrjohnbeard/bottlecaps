@@ -59,7 +59,7 @@ export default function NewOrderPage({ user, setUser }) {
           activeCat={activeCat}
           setActiveCat={setActiveCat}
         />
-        <button to="/orders" className="button btn-sm">PREVIOUS ORDERS</button>
+        <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       <List
