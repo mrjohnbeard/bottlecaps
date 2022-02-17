@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const styleSchema = new Schema(
 
     {
-    title: {},
-    sortOrder: {},
+    title: {  type: String, required: true },
+    sortOrder: Number,
     },
 
 { timestamps: true, }
