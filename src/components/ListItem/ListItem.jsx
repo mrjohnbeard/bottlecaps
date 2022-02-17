@@ -1,6 +1,7 @@
 import './ListItem.css';
 
 export default function ListItem({ listItem, handleAddToOrder }) {
+    console.log('blue', listItem);
     return (
         <div className="ListItem">
             <div className="year"> {listItem.year} </div>

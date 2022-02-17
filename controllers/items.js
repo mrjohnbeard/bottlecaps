@@ -7,6 +7,7 @@ module.exports = {
 
 async function index(req, res) {
     const items = await Item.find({}).populate('category').exec();
+    console.log(items, 'red')
     items.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
     res.json(items);
 }
