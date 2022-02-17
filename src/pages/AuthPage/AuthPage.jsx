@@ -8,7 +8,7 @@ export default function AuthPage({ setUser }) {
   return (
     <div>
     <main className="AuthPage">
-      <h1>Auth2.0Page</h1>
+      <h1>Welcome to Bottlecaps! Your one stop shop for your favorite Bottlecaps! Sign up or Login to continue!</h1>
       <div><br></br>
       <button onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'SIGN UP' : 'LOG IN'}</button>
       </div>
