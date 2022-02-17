@@ -6,15 +6,19 @@ import './AuthPage.css';
 export default function AuthPage({ setUser }) {
   const [showLogin, setShowLogin] = useState(true);
   return (
+    <div>
     <main className="AuthPage">
       <h1>Auth2.0Page</h1>
-      <br></br>
+      <div><br></br>
       <button onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'SIGN UP' : 'LOG IN'}</button>
+      </div>
+
       { showLogin ?
-        <SignUpForm setUser={setUser} />
-        :
         <LoginForm setUser={setUser} />
+        :
+        <SignUpForm setUser={setUser} />
       }
     </main>
+    </div>
   );
 }
