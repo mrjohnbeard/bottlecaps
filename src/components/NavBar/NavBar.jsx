@@ -1,24 +1,29 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import * as usersService from '../../utilities/users-service';
+import { Link } from "react-router-dom";
+import * as userService from "../../utilities/users-service";
 import './NavBar.css';
+function NavBar({ user, setUser }) {
 
-export default function NavBar(props) {
 
   function handleLogOut() {
-    usersService.logOut();
-    props.setUser(null);
+    userService.logOut();
+    setUser(null);
   }
+
 
   return (
     <nav>
-      <Link to="/orders">Order History</Link>
+      <span>Welcome, {user.name}!</span>
       &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link>
+
+      <Link className="nv-neworder" to="/orders/new" >New Order</Link>
       &nbsp; | &nbsp;
-      <span>Welcome, {props.user.name}</span>
+
+      <Link className="nv-orderhistory" to="/orders">Order History</Link>
       &nbsp; | &nbsp;
-      <Link to="" onClick={handleLogOut}>Log Out</Link>
+
+      <Link className="logout" onClick={handleLogOut} to="">Log Out</Link>
     </nav>
-  );
+    );
 }
+
+export default NavBar;

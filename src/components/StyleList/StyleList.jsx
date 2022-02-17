@@ -1,6 +1,6 @@
-import './CategoryList.css';
-export default function CategoryList({ categories, activeTaco, setActiveTaco }) {
-    const tacos = categories.map(taco =>
+import './StyleList.css';
+export default function StyleList({ styles, activeTaco, setActiveTaco }) {
+    const tacos = styles.map(taco =>
         <li
             key={taco}
             className={taco === activeTaco ? 'active' : ''}
@@ -10,7 +10,7 @@ export default function CategoryList({ categories, activeTaco, setActiveTaco }) 
         </li>
     );
     return (
-        <ul className="CategoryList">
+        <ul className="StyleList">
             {tacos}
         </ul>
     );

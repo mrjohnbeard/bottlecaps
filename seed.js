@@ -1,7 +1,7 @@
 require('dotenv').config();
 require('./config/databse');
 
-const Style = require('./models/category');
+const Style = require('./models/style');
 const Item = require('./models/item');
 
 (async function () {

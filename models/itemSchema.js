@@ -1,4 +1,5 @@
 const Schema = require('mongoose').Schema;
+require('./style');
 
 const itemSchema = new Schema(
     
