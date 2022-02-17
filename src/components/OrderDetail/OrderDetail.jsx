@@ -1,3 +1,4 @@
+import './OrderDetail.css'; 
 import LineItem from '../LineItem/LineItem';
 
 export default function OrderDetail({ order, handleChangeQty, handleCheckout }) {

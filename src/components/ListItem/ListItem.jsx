@@ -1,3 +1,4 @@
+import './ListItem.css';
 export default function ListItem({ listItem, handleAddToOrder }) {
     return (
         <div className="ListItem">

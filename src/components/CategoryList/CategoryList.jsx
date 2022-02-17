@@ -1,3 +1,4 @@
+import './CategoryList.css';
 export default function CategoryList({ categories, activeTaco, setActiveTaco }) {
     const tacos = categories.map(taco =>
         <li
