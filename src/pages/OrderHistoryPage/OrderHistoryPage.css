@@ -1,0 +1,18 @@
+.OrderHistoryPage {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1.4fr 3.3fr 3fr;
+	grid-template-rows: 1fr;
+	border-radius: 25px;
+	padding: 15px;
+	overflow-y: scroll;
+	padding: 75px 40px;
+	background-color: lightsalmon;
+}
+
+.OrderHistoryPage aside {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
